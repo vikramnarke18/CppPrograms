@@ -1,0 +1,87 @@
+
+In C++, a memory leak occurs when a program allocates memory on the heap but fails to release it after use. This unreleased memory remains occupied, reducing the available memory for the system and potentially leading to degraded performance or system crashes, especially in long-running applications. 
+GEEKSFORGEEKS
+
+Example of a Memory Leak:
+
+
+
+#include <iostream>
+
+void createLeak() {
+    int* ptr = new int(5); // Dynamically allocate memory
+    // ... use ptr ...
+    // Memory is not deallocated
+} // ptr goes out of scope, but memory remains allocated
+
+int main() {
+    for (int i = 0; i < 1000; ++i) {
+        createLeak();
+    }
+    // Over time, the unreleased memory accumulates
+    return 0;
+}
+
+
+In this example, each call to createLeak() allocates memory using new, but the allocated memory is never deallocated using delete. As ptr goes out of scope, the reference to the allocated memory is lost, leading to a memory leak.
+
+Consequences of Memory Leaks:
+
+Reduced Performance: Accumulated memory leaks can consume significant system memory, slowing down the application and other running processes.
+
+Program Crashes: Excessive memory leaks may exhaust available memory, causing the program to crash or behave unpredictably.
+
+Preventing Memory Leaks:
+
+Manual Deallocation: Ensure that every new allocation has a corresponding delete to release memory. 
+STACK OVERFLOW
+
+cpp
+Copy code
+void createLeak() {
+    int* ptr = new int(5);
+    // ... use ptr ...
+    delete ptr; // Deallocate memory
+}
+Smart Pointers: Utilize smart pointers like std::unique_ptr or std::shared_ptr from the C++ Standard Library, which automatically manage memory and deallocate it when no longer needed.
+
+cpp
+Copy code
+#include <memory>
+
+void createNoLeak() {
+    auto ptr = std::make_unique<int>(5);
+    // ... use ptr ...
+} // Memory is automatically deallocated when ptr goes out of scope
+Static Analysis Tools: Employ tools that analyze code to detect potential memory leaks and other issues.
+
+Valgrind: A popular tool for detecting memory leaks and memory management problems in C++ programs.
+
+By diligently managing dynamic memory and utilizing modern C++ features, you can prevent memory leaks and ensure efficient resource usage in your applications.
+
+After freeing the memory with delete, always set the pointer to nullptr to avoid a dangling pointer.
+int* ptr = new int(42); // Allocates memory for a single integer
+delete ptr;             // Frees memory for the single integer
+ptr=nullptr ;
+
+
+In C++, delete and delete[] are operators used to free dynamically allocated memory. 
+Their use depends on how the memory was allocated.
+
+delete
+Purpose: Frees memory allocated for a single object created with new.
+Behavior: Calls the destructor of the object (if applicable) and then releases the memory.
+Usage: Use delete when new was used to allocate a single object.
+
+int* ptr = new int(42); // Allocates memory for a single integer
+delete ptr;             // Frees memory for the single integer
+
+
+delete[]
+Purpose: Frees memory allocated for an array of objects created with new[].
+Behavior: Calls the destructor for each object in the array (if applicable) and then releases the memory.
+Usage: Use delete[] when new[] was used to allocate memory for an array.
+
+int* arr = new int[5]; // Allocates memory for an array of 5 integers
+delete[] arr;          // Frees memory for the array
+

@@ -1,0 +1,95 @@
+https://www.youtube.com/watch?v=QOHyB94zG54 -Inter Process Communication 
+
+https://www.youtube.com/watch?v=wQUY2W49xjQ -Pipe
+
+
+Linux is a robust and versatile operating system that offers comprehensive support for various system-level functionalities, including Inter-Process Communication (IPC), memory management, socket programming, signal handling, process scheduling, and process management. Here's an overview of these key components:
+
+1. Inter-Process Communication (IPC):
+
+IPC mechanisms enable processes to communicate and synchronize their actions. Linux provides several IPC methods:
+
+Pipes: Allow unidirectional data flow between processes.
+
+Message Queues: Enable processes to send and receive messages in a queue, preserving message boundaries.
+
+Shared Memory: Allows multiple processes to access the same memory segment, facilitating fast data exchange.
+
+Semaphores: Used for process synchronization to manage access to shared resources.
+
+Sockets: Facilitate communication between processes, either on the same machine or over a network.
+
+Each of these methods has its use cases and performance characteristics, and the choice depends on the specific requirements of the application. 
+WIKIPEDIA
+
+2. Memory Management:
+
+Linux employs advanced memory management techniques to efficiently handle system memory:
+
+Virtual Memory: Each process operates in its own virtual address space, allowing for isolation and protection.
+
+Paging: Divides memory into fixed-size pages, enabling efficient use of physical memory and swapping between RAM and disk storage.
+
+Memory Mapping: Allows files or devices to be mapped into the process's address space, facilitating efficient file I/O operations.
+
+Kernel Space vs. User Space: The kernel operates in a protected area of memory (kernel space), while user applications run in user space, preventing direct access to kernel memory and enhancing system stability. 
+WIKIPEDIA
+
+3. Sockets:
+
+Sockets provide a programming interface for network communication:
+
+Stream Sockets (TCP): Offer reliable, connection-oriented communication.
+
+Datagram Sockets (UDP): Provide connectionless communication with lower overhead.
+
+Unix Domain Sockets: Enable inter-process communication on the same machine with lower latency than network sockets.
+
+Sockets are fundamental for network programming in Linux, supporting a wide range of applications from web servers to distributed systems.
+
+4. Signals:
+
+Signals are used to notify processes of events:
+
+Signal Handling: Processes can handle signals to perform specific actions, such as cleaning up resources before termination.
+
+Common Signals: Include SIGINT (interrupt), SIGTERM (terminate), and SIGKILL (force kill).
+
+Proper signal handling is crucial for building robust applications that can gracefully handle asynchronous events.
+
+5. Scheduler:
+
+The Linux scheduler manages process execution:
+
+Preemptive Multitasking: Allows the kernel to preempt a running process to ensure fair CPU time distribution.
+
+Scheduling Policies: Linux supports various scheduling policies, including Completely Fair Scheduler (CFS), which aims to provide fair CPU time to all processes.
+
+Priorities and Nice Values: Processes can have priorities adjusted using nice values, influencing their scheduling.
+
+The scheduler plays a vital role in system performance and responsiveness.
+
+6. Process Management:
+
+Linux provides comprehensive tools for process management:
+
+Process Creation: Processes are created using system calls like fork() and exec().
+
+Process States: Processes can be in various states, such as running, sleeping, or stopped.
+
+Process Control: Signals and system calls like kill() and wait() are used to control process behavior.
+
+Process Scheduling: The kernel schedules processes based on their priority and scheduling policy.
+
+Understanding process management is essential for developing efficient and reliable applications.
+
+For a more in-depth exploration of these topics, you can refer to the following resources:
+
+Inter-process Communication: 
+WIKIPEDIA
+
+Kernel Architecture: 
+WIKIPEDIA
+
+Linux Kernel: 
+WIKIPEDIA

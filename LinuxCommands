@@ -1,0 +1,125 @@
+1. Linux Basics
+What are the commonly used Linux commands you use during development?
+Example: ls, cd, mkdir, rm, grep, find, cp, mv, diff, etc.
+
+How do you find files containing a specific text pattern?
+Answer: grep -r "pattern" /path.
+
+How do you check the available disk space on a Linux system?
+Answer: Use df -h.
+
+What is the use of chmod and chown commands?
+2. File and Directory Management
+
+How do you create a soft link and a hard link? What is the difference between them?
+What is the purpose of /etc, /var, /usr, and /dev directories in Linux?
+How do you set permissions for a file to be executable only by the owner?
+Answer: Use chmod 700 filename.
+3. C++ Compilation and Debugging on Linux
+How do you compile a C++ program using g++?
+Answer: g++ filename.cpp -o output.
+
+How do you include debugging information during compilation?
+Answer: Use -g flag with g++, e.g., g++ -g filename.cpp.
+What is the purpose of Makefile? Can you write a simple Makefile?
+Example:
+makefile
+Copy code
+all: program
+
+program: main.o
+    g++ -o program main.o
+
+main.o: main.cpp
+    g++ -c main.cpp
+
+clean:
+    rm -f *.o program
+How do you debug a C++ program using gdb?
+Key commands: break, run, next, step, print, bt.
+4. Process and Memory Management
+What is a process? How do you list all running processes in Linux?
+Answer: Use ps -aux or top.
+
+How do you find the PID of a process by its name?
+Answer: Use pgrep process_name.
+What is a zombie process? How do you identify and handle it?
+Answer: Use ps to find processes with status Z (zombie). These are child processes whose parent hasn't cleaned up their termination.
+How do you terminate a process in Linux?
+Answer: Use kill pid or kill -9 pid.
+
+What are shared memory and semaphores in Linux? How do you use them in C++?
+5. File I/O and Shared Libraries
+How do you create a shared library in Linux?
+Answer:
+Compile with position-independent code: g++ -fPIC -c file.cpp.
+Link with -shared: g++ -shared -o libname.so file.o.
+
+How do you link and use shared libraries in C++?
+At runtime: Use -L for the library path and -l for the library name.
+
+What is the difference between static and dynamic linking?
+How do you load shared libraries dynamically in Linux?
+Answer: Use dlopen() and dlsym().
+6. Shell Scripting
+How do you write a script to automate C++ compilation?
+Example:
+bash
+Copy code
+#!/bin/bash
+g++ -o output file.cpp
+./output
+How do you pass arguments to a shell script and use them?
+Answer: Use $1, $2, etc., for positional arguments.
+7. Performance Monitoring and Optimization
+How do you monitor CPU and memory usage?
+Answer: Use top, htop, or vmstat.
+How do you check disk I/O usage in Linux?
+Answer: Use iotop.
+What is valgrind, and how do you use it to detect memory leaks in a C++ program?
+Example: valgrind --leak-check=full ./program.
+8. Advanced Topics
+What is strace and ltrace, and how are they used?
+strace: Traces system calls.
+ltrace: Traces library calls.
+What are fork() and exec()? How are they used in process creation?
+How do you debug a core dump in Linux?
+Answer: Use gdb program core after enabling core dumps with ulimit -c unlimited.
+What is the use of ldd command?
+Answer: To list shared library dependencies of an executable.
+9. Networking in Linux
+How do you test network connectivity in Linux?
+Answer: Use ping, curl, or telnet.
+How do you check open ports on your system?
+Answer: Use netstat -tuln or ss -tuln.
+10. Real-World Application-Oriented Questions
+How would you handle logging in a C++ application running on Linux?
+How would you deploy a C++ application on a Linux server?
+How do you handle multi-threading in C++ on Linux?
+Answer: Use pthread or C++11 thread libraries.
+How do you optimize C++ applications for better performance on Linux?
+11. Problem-Solving
+Write a script or command pipeline to count the number of lines in all .cpp files in a directory.
+
+Answer: find . -name "*.cpp" | xargs wc -l.
+How do you find and replace a string in multiple files using a single command?
+
+Answer: Use sed -i 's/old_string/new_string/g' *.cpp.
+12. Behavioral Linux Questions
+Which Linux tools or commands do you use most often during development?
+Have you faced any challenges while debugging C++ programs on Linux? How did you solve them?
+Tips for Indian Interviews:
+Hands-on Knowledge:
+Be comfortable using Linux commands in a terminal. Many interviewers in India focus on practical command-line usage.
+Focus on gdb and valgrind:
+Debugging and memory profiling are frequently tested.
+Project Context:
+Be prepared to explain how you've used Linux for projects involving C++ development, deployment, or debugging.
+Scripting:
+Basic shell scripting knowledge can set you apart.
+These questions and topics will help you cover the Linux knowledge typically expected in Indian interviews for C++ developer roles.
+
+
+Compile and Run
+g++ source.cpp -o output && ./output
+

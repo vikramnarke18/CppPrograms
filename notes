@@ -1,0 +1,57 @@
+ extern is typically used for global variables that need to be accessed across multiple files, 
+but not for local variables or function parameters. It's especially useful for modular programming.
+
+extern int i;
+
+https://www.youtube.com/watch?v=MPvr-LmaZmA -array lit code problem 
+
+https://www.geeksforgeeks.org/storage-classes-in-c-with-examples/
+
+https://darsh-patel.hashnode.dev/understanding-virtual-functions-in-c-made-simple   --virtual functions 
+
+
+https://www.youtube.com/playlist?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt --patterns ,c++ stl complete tutorial
+
+
+https://www.youtube.com/watch?v=nCAVr_T4DbM -Lecture 23 Deep Copy and Shallow Copy in C++ Hindi
+
+
+https://www.youtube.com/watch?v=NXwb2j34BtA&list=TLPQMjAxMDIwMjRkFrdh7wQnJQ&index=2 -smart pointers 
+
+
+
+https://www.youtube.com/watch?v=Z_FiER8aAqM&t=697s -vtable and vptr
+
+
+https://www.youtube.com/watch?v=qYEjR6M0wSk&t=1799s -pointers 
+
+https://medium.com/@oleksandra_shershen/solid-principles-implementation-and-examples-in-c-99f0d7e3e868 --->solid principles
+
+
+https://www.youtube.com/watch?v=MOSjYaVymcU&t=276s -strings and character arrays
+
+https://www.youtube.com/watch?v=8wmn7k1TTcI&t=2386s -array data structure
+
+https://www.geeksforgeeks.org/list-cpp-stl/?ref=lbp  -- list imp
+
+https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4NzQ%3D - DSA couse 
+
+
+1. Compile-Time
+The compiler translates the source code (written in a high-level language like C++) into machine code or an intermediate form (like bytecode)
+
+
+2. Runtime
+The CPU executes the machine code instructions generated during compile-time.
+
+1. Network Communication Protocols
+These manage data transmission over networks.
+
+TCP (Transmission Control Protocol): Reliable, connection-oriented protocol for data transfer (e.g., web browsing, email).
+UDP (User Datagram Protocol): Faster, connectionless protocol for real-time applications (e.g., video streaming, online games).
+IP (Internet Protocol): Handles addressing and routing of data packets across networks.
+HTTP/HTTPS (HyperText Transfer Protocol / Secure): Transfers web content; HTTPS adds encryption via SSL/TLS.
+FTP/SFTP (File Transfer Protocol / Secure): Transfers files between computers over a network.
+SMTP (Simple Mail Transfer Protocol): Sends emails.
+IMAP/POP3: Receives and manages emails.
+
