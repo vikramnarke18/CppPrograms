@@ -1,30 +1,43 @@
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
 
-class test{
-    private:
-    static int objcount;
-    test(){
-       cout<<"private constructor"; 
+class singleton {
+    
+    private :
+    
+    singleton()
+    {
+        cout<<"I am private constructor"<<endl ;
     }
     
-   public:
-   
-   static test* getinstance()
-   {
-       if (objcount==0)
-          return NULL;
-          objcount++;
-       return new test();
-   }
+    public :
+    static int count;
+    
+    static singleton *getinstance ()
+    {
+        if (count==0)
+        {   
+            count++ ;
+            return new singleton();
+            
+        
+        }
+        else{
+            return nullptr;
+        }
+        
+    }
 
+
+    
 };
- int test::objcount=0;
+
+int singleton::count =0;
 
 int main() {
-    
-  test *p= test::getinstance();
+    // Write C++ code here
+  singleton ::getinstance ();
 
-  delete p;
     return 0;
 }

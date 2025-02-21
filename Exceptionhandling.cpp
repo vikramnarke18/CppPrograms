@@ -6,19 +6,18 @@ int main()
 {
   
   try{
-      
-    int a=5;
-    int b=0;
-    
+    int a,b;
+    cout<<"Enter two numbers"<<endl;
+    cin>>a>>b;
     if (b==0)
     {
         throw invalid_argument("Number cannot be 0");
         
     }
     
-    int result;
+    double result;
     result=a/b;
-    
+    cout<<result;
     
   }
   catch(exception &e)

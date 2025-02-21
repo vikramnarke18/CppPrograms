@@ -8,11 +8,12 @@ using namespace std;
 mutex carMutex;
 
 void driveCar(string name) {
-    unique_lock<mutex> carLock(carMutex); // Acquire lock immediately
+    unique_lock<mutex> Lock(carMutex); // Acquire lock immediately
 
     cout << name << " is driving" << endl;
     this_thread::sleep_for(chrono::seconds(2));
     cout << name << " is done driving" << endl;
+    Lock.unlock();
 
     // Implicit unlock when carLock goes out of scope
 }
