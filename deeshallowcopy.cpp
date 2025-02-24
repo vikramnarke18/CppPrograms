@@ -1,4 +1,9 @@
 // Online C++ compiler to run C++ program online
+//Characteristics of Shallow Copy:
+/*Copies only the pointer’s address, not the actual memory content.
+Both objects will point to the same dynamically allocated memory.
+If one object modifies the shared memory, the changes affect the other object.
+Can cause double deletion issues when both objects try to delete the same memory in their destructors.*/
 #include <iostream>
 using namespace std;
 

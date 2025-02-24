@@ -1,4 +1,7 @@
 // Online C++ compiler to run C++ program online
+
+//A deep copy creates a completely independent copy by allocating new memory and copying the 
+// actual data, rather than just copying the pointer.
 #include <iostream>
 using namespace std;
 
