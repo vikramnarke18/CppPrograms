@@ -1,5 +1,7 @@
-//In C++, a functor (or function object) is an object of a class that overloads the function call operator (), 
-//allowing it to be invoked as if it were a regular function. This enables objects to exhibit function-like behavior.
+//In C++, a functor (or function object) is an object of a class that overloads 
+// the function call operator (), 
+//allowing it to be invoked as if it were a regular function. This enables objects 
+// to exhibit function-like behavior.
 
 #include <iostream>  // Include the input-output stream library
 

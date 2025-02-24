@@ -54,12 +54,16 @@ This refactor makes it clear that not all birds can fly, and avoids the issue of
  
 
  /*Interface Segregation Principle (ISP)
-The Interface Segregation Principle (ISP) is one of the SOLID principles of object-oriented design. It states that a client should 
-not be forced to depend on interfaces that it does not use. In other words, a class should not have to 
+The Interface Segregation Principle (ISP) is one of the SOLID principles of object-oriented design.
+ It states that a client should 
+not be forced to depend on interfaces that it does not use. In other words, a class should 
+not have to 
 implement methods that it does not need.
 
-In C++, ISP can be implemented by breaking down larger interfaces into smaller, more specific interfaces. 
-This allows clients to only depend on the specific methods they need, rather than being forced to implement unnecessary methods.
+In C++, ISP can be implemented by breaking down larger interfaces into smaller, more 
+specific interfaces. 
+This allows clients to only depend on the specific methods they need, rather than being forced 
+to implement unnecessary methods.
 
 Let’s consider an example of a Printer class that can print documents in different formats, 
 such as PDF, HTML, and plain text. We could define a single interface for this class that includes 

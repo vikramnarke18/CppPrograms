@@ -31,12 +31,22 @@ public:
     }
 
     // Move Constructor
-    MyClass(MyClass&& other)  {
+    MyClass(MyClass&& other) noexcept  {
         std::cout << "Move Constructor called\n";
         data = other.data; // Steal the pointer
         other.data = nullptr; // Nullify the source
 
         cout<<*data<<endl;
+    }
+     
+     // Copy Assignment Operator
+     MyClass& operator=(const MyClass& other) {
+        std::cout << "Copy Assignment Operator called\n";
+        if (this != &other) {  // Self-assignment check
+            delete data; // Free existing resource
+            data = new int(*other.data); // Deep copy
+        }
+        return *this;
     }
 
     // Destructor
@@ -54,6 +64,8 @@ public:
 int main() {
     MyClass obj1(10);        // Normal constructor
     MyClass obj2 = move(obj1); // Move constructor
+    MyClass obj3(20);
+    obj3=obj2;
 
     return 0;
 }

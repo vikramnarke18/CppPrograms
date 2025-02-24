@@ -1,6 +1,6 @@
 #include <iostream>
 #include <memory>
-
+using namespace std;
 class MyClass {
 public:
     MyClass() { std::cout << "MyClass Constructor\n"; }
@@ -10,7 +10,7 @@ public:
 
 int main() {
     // Create a unique_ptr managing a new MyClass object
-    std::unique_ptr<MyClass> ptr1 = std::make_unique<MyClass>();
+    unique_ptr<MyClass> ptr1 = make_unique<MyClass>();
 
     // Use the unique_ptr to access MyClass methods
     ptr1->display();

@@ -33,12 +33,15 @@ public:
         // If the list is empty, newNode becomes both head and tail
         if (head == nullptr) {
             head = tail = newNode;
-            return;
+        
         }
+        else{
 
-        // Link newNode to the current head and update head to newNode
+        // Link newNode to the current h  ead and update head to newNode
         newNode->next = head;
         head = newNode;
+
+        }
     }
 
     // Function to insert a new node at the end of the linked list
@@ -156,7 +159,7 @@ int main() {
     list.display();
     
     // Search for an element and print its index
-    cout << list.search(20) << endl;
+    cout << list.search(200) << endl;
 
     return 0;
 }
